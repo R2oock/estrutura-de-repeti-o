@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <script>
+        let contador = 1;
+        let numerosPares = "";
+
+        // Loop do-while para exibir números pares de 1 a 50
+        do {
+            if (contador % 2 === 0) {
+                numerosPares += contador + "<br>";
+            }
+            contador++;
+        } while (contador <= 50);
+
+        // Exibir os números pares
+        document.write(`Números Pares de 1 a 50: <br> ${numerosPares}`);
+    </script>
+</body>
+</html>

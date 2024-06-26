@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Fibonacci</title>
+</head>
+<body>
+    <script>
+        let a = 0;
+        let b = 1;
+        let fibonacci = `${a} <br> ${b} <br>`;
+        let contador = 2;
+
+        // Loop do-while para gerar os primeiros 20 números da sequência de Fibonacci
+        do {
+            let proximo = a + b;
+            fibonacci += `${proximo} <br>`;
+            a = b;
+            b = proximo;
+            contador++;
+        } while (contador < 20);
+
+        // Exibir a sequência de Fibonacci
+        document.write(`Primeiros 20 números da sequência de Fibonacci: <br> ${fibonacci}`);
+    </script>
+</body>
+</html>

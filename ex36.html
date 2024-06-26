@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisores</title>
+</head>
+<body>
+    <script>
+        // Solicitar um número inteiro positivo ao usuário
+        let numero;
+        
+        while (true) {
+            numero = parseInt(prompt("Digite um número inteiro positivo:"));
+            
+            if (!isNaN(numero) && numero > 0) {
+                break;
+            } else {
+                alert("Por favor, digite um número inteiro positivo válido.");
+            }
+        }
+
+        let divisores = "";
+
+        // Loop for para encontrar e exibir os divisores
+        for (let i = 1; i <= numero; i++) {
+            if (numero % i === 0) {
+                divisores += i + "<br>";
+            }
+        }
+
+        // Exibir os divisores
+        document.write(`Divisores de ${numero}: <br> ${divisores}`);
+    </script>
+</body>
+</html>

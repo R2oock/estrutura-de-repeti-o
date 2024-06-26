@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numeros primos </title>
+</head>
+<body>
+    <script>
+        let numero;
+
+        // Ler um número inteiro positivo maior que 1 do usuário
+        while (true) {
+            numero = parseInt(prompt("Digite um número inteiro positivo maior que 1:"));
+        
+            if (!isNaN(numero) && numero > 1) {
+                break;
+            } else {
+                alert("Por favor, digite um número inteiro positivo maior que 1.");
+            }
+        }
+        
+        let divisor = 2;
+        let ehPrimo = true;
+        
+        // Verificar se o número é primo usando um loop while
+        while (divisor <= Math.sqrt(numero) && ehPrimo) {
+            if (numero % divisor === 0) {
+                ehPrimo = false;
+            }
+            divisor++;
+        }
+        
+        // Exibir o resultado
+        if (ehPrimo) {
+            document.write(`${numero} é um número primo.`);
+        } else {
+            document.write(`${numero} não é um número primo.`);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dígitos Separados</title>
+</head>
+<body>
+    <script>
+        // Solicitar um número inteiro ao usuário
+        let numero;
+        
+        while (true) {
+            numero = parseInt(prompt("Digite um número inteiro:"));
+            
+            if (!isNaN(numero)) {
+                break;
+            } else {
+                alert("Por favor, digite um número inteiro válido.");
+            }
+        }
+
+        let numeroStr = numero.toString();
+        let i = 0;
+        let digitos = "";
+
+        // Loop while para separar e exibir os dígitos
+        while (i < numeroStr.length) {
+            digitos += numeroStr.charAt(i) + "<br>";
+            i++;
+        }
+
+        // Exibir os dígitos separadamente
+        document.write(`Dígitos de ${numero}: <br> ${digitos}`);
+    </script>
+</body>
+</html>
+

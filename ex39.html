@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média das Idades</title>
+</head>
+<body>
+    <script>
+        let somaIdades = 0;
+
+        // Loop for para ler o nome e a idade de 5 pessoas
+        for (let i = 1; i <= 5; i++) {
+            let nome = prompt(`Digite o nome da ${i}ª pessoa:`);
+            let idade;
+            
+            // Validar idade
+            while (true) {
+                idade = parseInt(prompt(`Digite a idade de ${nome}:`));
+                
+                if (!isNaN(idade) && idade > 0) {
+                    break;
+                } else {
+                    alert("Por favor, digite uma idade válida.");
+                }
+            }
+
+            somaIdades += idade;
+        }
+
+        // Calcular a média das idades
+        let mediaIdades = somaIdades / 5;
+
+        // Exibir a média das idades
+        document.write(`A média das idades é: ${mediaIdades}`);
+    </script>
+</body>
+</html>

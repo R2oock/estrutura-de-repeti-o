@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <script>
+        // Solicitar um número inteiro ao usuário
+        let numero;
+        
+        while (true) {
+            numero = parseInt(prompt("Digite um número inteiro:"));
+            
+            if (!isNaN(numero)) {
+                break;
+            } else {
+                alert("Por favor, digite um número inteiro válido.");
+            }
+        }
+
+        let contador = 1;
+        let tabuada = "";
+
+        // Loop do-while para exibir a tabuada
+        do {
+            tabuada += `${numero} x ${contador} = ${numero * contador}<br>`;
+            contador++;
+        } while (contador <= 10);
+
+        // Exibir a tabuada
+        document.write(`Tabuada do ${numero}:<br> ${tabuada}`);
+    </script>
+</body>
+</html>

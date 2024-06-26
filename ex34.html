@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de 5 Números</title>
+</head>
+<body>
+    <script>
+        let soma = 0;
+
+        // Loop for para ler 5 números inteiros
+        for (let i = 1; i <= 5; i++) {
+            let numero;
+            while (true) {
+                numero = parseInt(prompt(`Digite o ${i}º número inteiro:`));
+                
+                if (!isNaN(numero)) {
+                    break;
+                } else {
+                    alert("Por favor, digite um número inteiro válido.");
+                }
+            }
+
+            soma += numero;
+        }
+
+        // Calcular a média aritmética
+        let media = soma / 5;
+
+        // Exibir a média
+        document.write(`A média dos números é: ${media}`);
+    </script>
+</body>
+</html>

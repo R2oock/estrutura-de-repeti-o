@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Ímpares de 50 a 1</title>
+</head>
+<body>
+    <script>
+        let numerosImpares = "";
+
+        // Loop for para exibir os números ímpares de 50 a 1
+        for (let i = 50; i >= 1; i--) {
+            if (i % 2 !== 0) {
+                numerosImpares += i + "<br>";
+            }
+        }
+
+        // Exibir os números ímpares
+        document.write(`Números Ímpares de 50 a 1: <br> ${numerosImpares}`);
+    </script>
+</body>
+</html>

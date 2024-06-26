@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media de idade</title>
+</head>
+<body>
+    <script>
+        let contador = 1;
+        let somaIdades = 0;
+        let nomesIdades = "";
+        
+        // Loop while para ler o nome e a idade de 5 pessoas
+        while (contador <= 5) {
+            let nome = prompt(`Digite o nome da ${contador}ª pessoa:`);
+            let idade;
+        
+            // Validar idade
+            while (true) {
+                idade = parseInt(prompt(`Digite a idade de ${nome}:`));
+                
+                if (!isNaN(idade) && idade > 0) {
+                    break;
+                } else {
+                    alert("Por favor, digite uma idade válida.");
+                }
+            }
+        
+            // Adicionar nome e idade à string nomesIdades
+            nomesIdades += `${nome} - ${idade} anos</br>`;
+            
+            // Somar as idades
+            somaIdades += idade;
+        
+            contador++;
+        }
+        
+        // Calcular média das idades
+        let mediaIdades = somaIdades / 5;
+        
+        // Exibir nomes, idades e média das idades
+        document.write(`Nomes e Idades: </br>  ${nomesIdades} </br>`);
+        document.write(`<br>Média das Idades: ${mediaIdades.toFixed(0)} anos.`);
+        
+    </script>
+</body>
+</html>

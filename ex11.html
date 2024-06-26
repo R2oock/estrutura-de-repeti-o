@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Números Pares</title>
+</head>
+<body>
+    <script>
+        // Solicitar um número inteiro ao usuário
+        let numero;
+        
+        while (true) {
+            numero = parseInt(prompt("Digite um número inteiro:"));
+            
+            if (!isNaN(numero)) {
+                break;
+            } else {
+                alert("Por favor, digite um número inteiro válido.");
+            }
+        }
+
+        let somaPares = 0;
+        let contador = 1;
+
+        // Loop while para calcular a soma dos números pares
+        while (contador <= numero) {
+            if (contador % 2 === 0) {
+                somaPares += contador;
+            }
+            contador++;
+        }
+
+        // Exibir a soma dos números pares
+        document.write(`A soma de todos os números pares entre 1 e ${numero} é: ${somaPares}`);
+    </script>
+</body>
+</html>

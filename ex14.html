@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+</head>
+<body>
+    <script>
+        // Solicitar um número inteiro ao usuário
+        let numero;
+        
+        while (true) {
+            numero = parseInt(prompt("Digite um número inteiro:"));
+            
+            if (!isNaN(numero) && numero >= 0) {
+                break;
+            } else {
+                alert("Por favor, digite um número inteiro válido.");
+            }
+        }
+
+        let fatorial = 1;
+        let i = 1;
+
+        // Loop while para calcular o fatorial
+        while (i <= numero) {
+            fatorial *= i;
+            i++;
+        }
+
+        // Exibir o fatorial
+        document.write(`O fatorial de ${numero} é: ${fatorial}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Primo</title>
+</head>
+<body>
+    <script>
+        // Solicitar um número inteiro ao usuário
+        let numero;
+        
+        while (true) {
+            numero = parseInt(prompt("Digite um número inteiro:"));
+            
+            if (!isNaN(numero) && numero > 1) {
+                break;
+            } else {
+                alert("Por favor, digite um número inteiro maior que 1.");
+            }
+        }
+
+        let ehPrimo = true;
+
+        // Loop for para verificar se o número é primo
+        for (let i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i === 0) {
+                ehPrimo = false;
+                break;
+            }
+        }
+
+        // Exibir se o número é primo
+        if (ehPrimo) {
+            document.write(`${numero} é um número primo.`);
+        } else {
+            document.write(`${numero} não é um número primo.`);
+        }
+    </script>
+</body>
+</html>
